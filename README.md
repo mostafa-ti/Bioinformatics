@@ -1,4 +1,4 @@
-Dependencies:
+Dependencies:<br/>
 Install python3, pip3
 
 Install matplotlib.pyplot:
