@@ -1,3 +1,4 @@
+Alt-H1 LOVD local installation
 # Software requirements for the LOVD local installation:
 A webserver to run PHP scripts like Apache webserver.
 PHP 5.3.0 or higher
@@ -17,6 +18,6 @@ The standard config file “config.ini.php-lovd” should be renamed to “confi
 
 ## Start the installation:
 1. Run XAMPP.
-2. copy LOVD installation folder to the desired folder provided by the server. The address format in macOS is: http://[localhost]/LOVDv.3.0/ for example: http://192.168.64.2/dashboard/LOVDv.3.0
+2. Copy LOVD installation folder to the desired folder provided by the server. The address format in macOS is: http://[localhost]/LOVDv.3.0/ for example: http://192.168.64.2/dashboard/LOVDv.3.0
 
 
