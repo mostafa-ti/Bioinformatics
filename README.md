@@ -19,7 +19,7 @@ The standard config file “config.ini.php-lovd” should be renamed to “confi
 1. Run XAMPP.
 2. Copy LOVD installation folder to the desired folder provided by the server. The address format in macOS is: http://[localhost]/LOVDv.3.0/ for example: http://192.168.64.2/dashboard/LOVDv.3.0
 
-..* Installing LOVD consists of only 4 simple steps and takes only a couple of minutes. Each step contains various forms and filling them is pretty straight forward. 
++ Installing LOVD consists of only 4 simple steps and takes only a couple of minutes. Each step contains various forms and filling them is pretty straight forward. 
 
 
 
