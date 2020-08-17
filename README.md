@@ -15,4 +15,8 @@ Go to LOVD homepage and download and extract [LOVD 3.0](http://www.lovd.nl/3.0/h
 ### Pre-install configuration:
 The standard config file “config.ini.php-lovd” should be renamed to “config.ini.php” and edited in a text editor. This is definitely mandatory because it is required to enter the MySQL hostname, username, password and database name here. In my case, as I used XAMPP, the hostname: “localhost”, username: “root” and password: “” which means empty. No quotes around the values are needed. 
 
+## Start the installation:
+1. Run XAMPP.
+2. copy LOVD installation folder to the desired folder provided by the server. The address format in macOS is: http://[localhost]/LOVDv.3.0/ for example: http://192.168.64.2/dashboard/LOVDv.3.0
+
 
