@@ -12,4 +12,7 @@ XAMPP is a PHP development environment which provides Apache, Mysql, PHP and Per
 
 Go to LOVD homepage and download and extract [LOVD 3.0](http://www.lovd.nl/3.0/home)
 
+### Pre-install configuration:
+The standard config file “config.ini.php-lovd” should be renamed to “config.ini.php” and edited in a text editor. This is definitely mandatory because it is required to enter the MySQL hostname, username, password and database name here. In my case, as I used XAMPP, the hostname: “localhost”, username: “root” and password: “” which means empty. No quotes around the values are needed. 
+
 
