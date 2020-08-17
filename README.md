@@ -1,29 +1,47 @@
-# Software requirements for the LOVD local installation:
-+ A webserver to run PHP scripts like Apache webserver.
-+ PHP 5.3.0 or higher
-+ Mysql 4.1.2 or higher
+Dependencies:<br/>
+Install python3, pip3
 
-## Download and Install XAMPP:
-Click [here](https://www.apachefriends.org/index.html) to download XAMPP.
+Install matplotlib.pyplot:<br/>
+$ pip3 install matplotlib
 
-XAMPP is a PHP development environment which provides Apache, Mysql, PHP and Perl.
+Install python mpl_toolkits:<br/>
+$ pip3 install matplotlib
 
-## Download & Extract LOVD:
+install scipy:<br/>
+$ pip3 install scipy
 
-Go to LOVD homepage and download and extract [LOVD 3.0](http://www.lovd.nl/3.0/home)
+install numpy:<br/>
+$ pip3 install numpy
 
-### Pre-install configuration:
-The standard config file “config.ini.php-lovd” should be renamed to “config.ini.php” and edited in a text editor. This is definitely mandatory because it is required to enter the MySQL hostname, username, password and database name here. In my case, as I used XAMPP, the hostname: “localhost”, username: “root” and password: “” which means empty. No quotes around the values are needed. 
-
-## Start the installation:
-1. Run XAMPP.
-2. In the menu bar choose _General_ window and click on _Go to application_.
-3. A web browser runs and in the adress bar IP adress has shown with the desired folder on your computer.
-4. In the menu bar choose _Volumes_ window and click on _Explore_.
-5. Copy LOVD installation folder to the desired folder that you have seen on the step 3.
-6. Point your browser to the following address. The format in macOS is: http://[localhost]/LOVDv.3.0/ for example: http://192.168.64.2/dashboard/LOVDv.3.0.
-
-+ Installing LOVD consists of only 4 simple steps and takes only a couple of minutes. Each step contains various forms and filling them is pretty straight forward. 
+# Bioinformatics
+Description:<br/>
+This python script parses the genome based on two integer number which defines window size and number of steps, calculate coordinates of nodes for each window size based on Xn,Yn and Zn components and then construct a unique representation of the DNA sequence.<br/>
 
 
+Definition of Z-curve components: <br/>
+Xn is the distribution of Purines (A,G) and Pyrimidins(C,T)
+Xn = (An+Gn) - (Cn+Tn)
 
+Yn is the distribution of Amino (A,C) and Keto (G,T) <br/>
+Yn = (An+Cn) - (Gn+Tn)
+
+Zn is the distribution of Weak hydrogen bonds (A,T) and Strong hydrogen bonds (C,G) <br/>
+Zn = (An+Tn) - (Cn+Gn)
+
+List of functions: <br/>
+There are four defined functions used in this program.<br/>
+- readfasta function to read the fasta files.<br/>
+- frequency function to calculate the abondancy of each nucleotide.<br/>
+- slide_win function, this function parses the fasta file based on window size<br/>
+and step. Both window size and step should be defined by user.<br/>
+- Z_curve function to calculate the Z curve components based on the formula for
+the components X, Y and Z.<br/>
+
+At the end The Z curves have been smoothed by using the interpolation module from the SciPy library in python.<br/>
+
+Procedure:<br/>
+Program name: Z_curve.py<br/>
+fin: fasta_file.fna<br/>
+
+Usage:<br/>
+./Z_curve.py input.fna [integer window size] [integer step]
